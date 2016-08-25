@@ -132,13 +132,4 @@
   <data name="ChambaUser" xml:space="preserve">
     <value>ana.ocampo@ceiba.com.co</value>
   </data>
-  <data name="SpecFlowPlus" xml:space="preserve">
-    <value>http://www.specflow.org/plus/</value>
-  </data>
-  <data name="SpecFlowPlusExcel" xml:space="preserve">
-    <value>http://www.specflow.org/plus/Excel/</value>
-  </data>
-  <data name="StartedExcelButtonText" xml:space="preserve">
-    <value>Get Started Now with SpecFlow+ Excel!</value>
-  </data>
 </root>

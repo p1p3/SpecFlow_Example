@@ -13,6 +13,7 @@ namespace SeleniumWebDriver.Pages
     {
 
         private readonly IWebDriver _driver;
+        public string Address { get; set; }
 
         public ChambaDashboard(IWebDriver driver)
         {
@@ -20,16 +21,11 @@ namespace SeleniumWebDriver.Pages
             Address = string.Concat(Constants.BaseAddress, Constants.ChambaDashboard);
         }
 
-
-        #region Implementation of IPage
-
-        public string Address { get; set; }
         public string MensajeBienvenida()
         {
             var userName = _driver.FindElement(By.CssSelector(".user-name li"));
             return userName.Text;
         }
 
-        #endregion
     }
 }

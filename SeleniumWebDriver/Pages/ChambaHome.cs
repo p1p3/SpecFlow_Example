@@ -12,6 +12,7 @@ namespace SeleniumWebDriver.Pages
     public class ChambaHome : IChambaHome
     {
         private readonly IWebDriver _driver;
+        public string Address { get; set; }
 
         public ChambaHome(IWebDriver driver)
         {
@@ -19,9 +20,6 @@ namespace SeleniumWebDriver.Pages
             Address = Constants.BaseAddress;
         }
 
-        #region Implementation of IPage
-
-        public string Address { get; set; }
         public IChambaLogin ClickIngresar()
         {
             var loginButton = _driver.FindElement(By.Id("loginLink"));
@@ -29,6 +27,5 @@ namespace SeleniumWebDriver.Pages
             return new ChambaLogin(_driver);
         }
 
-        #endregion
     }
 }

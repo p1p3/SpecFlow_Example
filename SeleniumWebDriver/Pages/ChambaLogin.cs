@@ -12,16 +12,13 @@ namespace SeleniumWebDriver.Pages
     public class ChambaLogin : IChambaLogin
     {
         private readonly IWebDriver _driver;
-
+        public string Address { get; set; }
         public ChambaLogin(IWebDriver driver)
         {
             _driver = driver;
             Address = string.Concat(Constants.BaseAddress, Constants.ChambaLogin);
         }
 
-        #region Implementation of IPage
-
-        public string Address { get; set; }
         public void SetEmail(string email)
         {
             var emailTextBox = _driver.FindElement(By.Id("txtemail"));
@@ -42,7 +39,5 @@ namespace SeleniumWebDriver.Pages
             loginButton.Click();
             return new ChambaDashboard(_driver);
         }
-
-        #endregion
     }
 }

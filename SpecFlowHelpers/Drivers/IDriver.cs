@@ -8,6 +8,5 @@ namespace SpecFlowHelpers.Drivers
         void NavigateTo(IPage page);
         IChambaHome NavigateToHomePage();
         void Close();
-        void TurnOnWait();
     }
 }

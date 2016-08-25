@@ -104,32 +104,5 @@ namespace SpecFlowHelpers {
                 return ResourceManager.GetString("ChambaUser", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to http://www.specflow.org/plus/.
-        /// </summary>
-        public static string SpecFlowPlus {
-            get {
-                return ResourceManager.GetString("SpecFlowPlus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to http://www.specflow.org/plus/Excel/.
-        /// </summary>
-        public static string SpecFlowPlusExcel {
-            get {
-                return ResourceManager.GetString("SpecFlowPlusExcel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Get Started Now with SpecFlow+ Excel!.
-        /// </summary>
-        public static string StartedExcelButtonText {
-            get {
-                return ResourceManager.GetString("StartedExcelButtonText", resourceCulture);
-            }
-        }
     }
 }
