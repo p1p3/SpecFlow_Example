@@ -61,11 +61,47 @@ namespace SpecFlowHelpers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://www.specflow.org.
+        ///   Looks up a localized string similar to http://sucursalvirtualdllo.cloudapp.net.
         /// </summary>
         public static string BaseAddress {
             get {
                 return ResourceManager.GetString("BaseAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /chamba/Customer.
+        /// </summary>
+        public static string ChambaDashboard {
+            get {
+                return ResourceManager.GetString("ChambaDashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /Security/login.
+        /// </summary>
+        public static string ChambaLogin {
+            get {
+                return ResourceManager.GetString("ChambaLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Abc12345.
+        /// </summary>
+        public static string ChambaPassword {
+            get {
+                return ResourceManager.GetString("ChambaPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ana.ocampo@ceiba.com.co.
+        /// </summary>
+        public static string ChambaUser {
+            get {
+                return ResourceManager.GetString("ChambaUser", resourceCulture);
             }
         }
         

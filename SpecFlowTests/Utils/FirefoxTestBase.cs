@@ -6,22 +6,20 @@ using TechTalk.SpecFlow;
 namespace SpecFlowTests.Utils
 {
 
-
-    public class ChromeTestBase
+ 
+    public class FirefoxTestBase
     {
 
         protected IDriver Driver { get; private set; }
 
-        [BeforeScenario]
-        public void Setup()
+        public void Start()
         {
             var waitTime = TimeSpan.FromSeconds(10000);
             Driver = new FirefoxWebDriver(waitTime);
             Driver.Initialize();
         }
 
-        [AfterScenario]
-        public void TearDown()
+        public void Stop()
         {
             Driver.Close();
         }

@@ -21,24 +21,24 @@ namespace SeleniumWebDriver.Drivers
         #region Members
         private readonly TimeSpan _turnOnWaitTime;
         private readonly IWebDriver _webDriver;
-        private ISpecFlowHome _homePage;
+        private IChambaHome _homePage;
         #endregion
 
         #region Implementation of IDriver
 
         public void Initialize()
         {
-            _homePage = new SpecFlowHome(_webDriver);
+            _homePage = new ChambaHome(_webDriver);
             _webDriver.Manage().Window.Maximize();
         }
 
 
-        public void NavigateTo(IBasePage page)
+        public void NavigateTo(IPage page)
         {
             _webDriver.Navigate().GoToUrl(page.Address);
         }
 
-        public ISpecFlowHome NavigateToHomePage()
+        public IChambaHome NavigateToHomePage()
         {
             NavigateTo(_homePage);
             return _homePage;

@@ -9,29 +9,28 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
-
-using TechTalk.SpecFlow;
-
 #pragma warning disable
-namespace SpecFlowTests.Acceptance_Tests
+namespace SpecFlowTests.AcceptanceTests
 {
+    using TechTalk.SpecFlow;
+    
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class NavigateSpecFlowExcelFeature
+    public partial class IngresarAChambaTePrestaFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "NavigateSpecFlowExcel.feature"
+#line 1 "IngresarChambaTePresta.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "NavigateSpecFlowExcel", "\tIn order to navigate to Specflow-Excel documentation\r\n\tAs a Specflow user\r\n\tI wa" +
-                    "nt to Select Specflow+-->Specflow+-Excel", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("es-CO"), "Ingresar a Chamba te presta", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -46,9 +45,9 @@ namespace SpecFlowTests.Acceptance_Tests
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "NavigateSpecFlowExcel")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Ingresar a Chamba te presta")))
             {
-                NavigateSpecFlowExcelFeature.FeatureSetup(null);
+                SpecFlowTests.AcceptanceTests.IngresarAChambaTePrestaFeature.FeatureSetup(null);
             }
         }
         
@@ -69,21 +68,25 @@ namespace SpecFlowTests.Acceptance_Tests
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Navigate to Specflow+")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "NavigateSpecFlowExcel")]
-        public virtual void NavigateToSpecflow()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Ingresar a Chamba te presta")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Ingresar a Chamba te presta")]
+        public virtual void IngresarAChambaTePresta()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Navigate to Specflow+", ((string[])(null)));
-#line 6
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ingresar a Chamba te presta", ((string[])(null)));
+#line 4
 this.ScenarioSetup(scenarioInfo);
+#line 5
+ testRunner.Given("he ingresado a Chamba te presta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line 6
+  testRunner.And("he presionado Ingresar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 7
- testRunner.Given("the specflow page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.And("he ingresado el correo electrónico", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 8
- testRunner.When("I press Specflow+", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("he ingresado mi contraseña", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 9
- testRunner.And("Specflow+-Excel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("presiono Ingresar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Cuando ");
 #line 10
- testRunner.Then("I\'m able to see \'Get Started Now with Specflow+ Excel!\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("debo ver \"Bienvenido(a): JUAN RICARDO DELGADO GALVEZ\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entonces ");
 #line hidden
             this.ScenarioCleanup();
         }

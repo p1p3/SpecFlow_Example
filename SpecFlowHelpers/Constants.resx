@@ -118,7 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BaseAddress" xml:space="preserve">
-    <value>http://www.specflow.org</value>
+    <value>http://sucursalvirtualdllo.cloudapp.net</value>
+  </data>
+  <data name="ChambaDashboard" xml:space="preserve">
+    <value>/chamba/Customer</value>
+  </data>
+  <data name="ChambaLogin" xml:space="preserve">
+    <value>/Security/login</value>
+  </data>
+  <data name="ChambaPassword" xml:space="preserve">
+    <value>Abc12345</value>
+  </data>
+  <data name="ChambaUser" xml:space="preserve">
+    <value>ana.ocampo@ceiba.com.co</value>
   </data>
   <data name="SpecFlowPlus" xml:space="preserve">
     <value>http://www.specflow.org/plus/</value>

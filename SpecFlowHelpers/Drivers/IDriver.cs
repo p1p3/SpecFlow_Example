@@ -5,8 +5,8 @@ namespace SpecFlowHelpers.Drivers
     public interface IDriver
     {
         void Initialize();
-        void NavigateTo(IBasePage page);
-        ISpecFlowHome NavigateToHomePage();
+        void NavigateTo(IPage page);
+        IChambaHome NavigateToHomePage();
         void Close();
         void TurnOnWait();
     }

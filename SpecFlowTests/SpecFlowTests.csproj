@@ -55,21 +55,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Utils\ChromeTestBase.cs" />
-    <Compile Include="Acceptance Tests\NavigateSpecFlowExcel.feature.cs">
+    <Compile Include="Acceptance Tests\IngresarChambaTePresta.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NavigateSpecFlowExcel.feature</DependentUpon>
+      <DependentUpon>IngresarChambaTePresta.feature</DependentUpon>
     </Compile>
-    <Compile Include="Acceptance Tests\NavigateSpecFlowExcelSteps.cs" />
+    <Compile Include="Acceptance Tests\IngresarAChambaTePrestaSteps.cs" />
+    <Compile Include="Utils\FirefoxTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="Acceptance Tests\NavigateSpecFlowExcel.feature">
+    <None Include="Acceptance Tests\IngresarChambaTePresta.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>NavigateSpecFlowExcel.feature.cs</LastGenOutput>
+      <LastGenOutput>IngresarChambaTePresta.feature.cs</LastGenOutput>
     </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

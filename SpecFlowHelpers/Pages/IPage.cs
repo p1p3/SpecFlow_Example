@@ -1,6 +1,6 @@
 ﻿namespace SpecFlowHelpers.Pages
 {
-    public interface IBasePage
+    public interface IPage
     {
         string Address { get; set; }
     }

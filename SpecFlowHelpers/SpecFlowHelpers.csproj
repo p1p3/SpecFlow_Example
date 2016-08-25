@@ -46,10 +46,10 @@
       <DependentUpon>Constants.resx</DependentUpon>
     </Compile>
     <Compile Include="Drivers\IDriver.cs" />
-    <Compile Include="Pages\IBasePage.cs" />
-    <Compile Include="Pages\ISpecFlowHome.cs" />
-    <Compile Include="Pages\ISpecFlowPlus.cs" />
-    <Compile Include="Pages\ISpecFlowPlusExcel.cs" />
+    <Compile Include="Pages\IChambaDashboard.cs" />
+    <Compile Include="Pages\IPage.cs" />
+    <Compile Include="Pages\IChambaHome.cs" />
+    <Compile Include="Pages\IChambaLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

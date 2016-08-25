@@ -51,10 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Drivers\ChromeDriver.cs" />
-    <Compile Include="Pages\SpecFlowHome.cs" />
-    <Compile Include="Pages\SpecFlowPlus.cs" />
-    <Compile Include="Pages\SpecFlowPlusExcel.cs" />
+    <Compile Include="Drivers\FirefoxWebDriver.cs" />
+    <Compile Include="Pages\ChambaDashboard.cs" />
+    <Compile Include="Pages\ChambaHome.cs" />
+    <Compile Include="Pages\ChambaLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
