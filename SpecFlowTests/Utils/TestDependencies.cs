@@ -1,24 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Autofac;
+using SeleniumWebDriver;
+using SeleniumWebDriver.Drivers;
+using SpecFlow.Autofac;
+using SpecFlowHelpers.Drivers;
 using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Infrastructure;
-//using SpecFlow.Autofac;
 
 namespace SpecFlowTests.Utils
 {
     public static class TestDependencies
     {
-        //[ScenarioDependencies]
-        //public static ContainerBuilder CreateContainerBuilder()
-        //{
-        //    var builder = Dependencies.CreateContainerBuilder();
+        [ScenarioDependencies]
+        public static Autofac.ContainerBuilder CreateContainerBuilder()
+        {
+            var builder = new ContainerBuilder();
 
-        //    builder.RegisterTypes(typeof(TestDependencies).Assembly.GetTypes().Where(t => Attribute.IsDefined(t, typeof(BindingAttribute))).ToArray()).SingleInstance();
+            builder.RegisterType<FirefoxWebDriver>().As<IDriver>();
+            builder.RegisterType<FirefoxTestBase>().As<ITestDriver>();
 
-        //    return builder;
-        //}
+            builder.RegisterTypes(typeof(TestDependencies).Assembly.GetTypes().Where(t => Attribute.IsDefined(t, typeof(BindingAttribute))).ToArray()).SingleInstance();
+
+            return builder;
+        }
     }
+
+
 }

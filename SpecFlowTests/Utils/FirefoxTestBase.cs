@@ -10,12 +10,15 @@ namespace SpecFlowTests.Utils
     public class FirefoxTestBase : ITestDriver
     {
 
+        public FirefoxTestBase(IDriver driver)
+        {
+            Driver = driver;
+        }
+
         public IDriver Driver { get; private set; }
 
         public void Start()
         {
-            var waitTime = TimeSpan.FromSeconds(10000);
-            Driver = new FirefoxWebDriver(waitTime);
             Driver.Initialize();
         }
 

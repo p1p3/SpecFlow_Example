@@ -11,9 +11,9 @@ namespace SeleniumWebDriver.Drivers
 {
     public class FirefoxWebDriver : IDriver
     {
-        public FirefoxWebDriver(TimeSpan turnOnWaitTime)
+        public FirefoxWebDriver()
         {
-            _turnOnWaitTime = turnOnWaitTime;
+            _turnOnWaitTime = TimeSpan.FromSeconds(15);
             _webDriver = new FirefoxDriver();
             TurnOnWait();
         }

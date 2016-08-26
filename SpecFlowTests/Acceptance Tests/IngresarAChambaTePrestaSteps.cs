@@ -9,29 +9,35 @@ using TechTalk.SpecFlow;
 namespace SpecFlowTests.Acceptance_Tests
 {
     [Binding]
-    public class IngresarAChambaTePrestaSteps : FirefoxTestBase
+    public class IngresarAChambaTePrestaSteps
     {
 
+        private readonly ITestDriver _testDriver;
         private IChambaHome _homePage;
         private IChambaLogin _chambaLogin;
         private IChambaDashboard _chambaDashboard;
 
+        public IngresarAChambaTePrestaSteps(ITestDriver testDriver)
+        {
+            _testDriver = testDriver;
+        }
+
         [BeforeScenario]
         public void Setup()
         {
-            base.Start();
+            _testDriver.Start();
         }
 
         [AfterScenario]
         public void TearDown()
         {
-            base.Stop();
+            _testDriver.Stop();
         }
 
         [Given(@"he ingresado a Chamba te presta")]
         public void DadoHeIngresadoAChambaTePresta()
         {
-            _homePage = base.Driver.NavigateToHomePage();
+            _homePage = _testDriver.Driver.NavigateToHomePage();
         }
 
         [Given(@"he presionado Ingresar")]
