@@ -16,7 +16,8 @@ namespace SpecFlowTests.Utils
             var container = new UnityContainer();
 
             container.RegisterType<IDriver, FirefoxWebDriver>();
-
+            container.RegisterType<ITestDriver, FirefoxTestBase>();
+ 
             return container;
         }
     }
