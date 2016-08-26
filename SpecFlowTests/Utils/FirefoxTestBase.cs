@@ -6,11 +6,11 @@ using TechTalk.SpecFlow;
 namespace SpecFlowTests.Utils
 {
 
- 
-    public class FirefoxTestBase
+
+    public class FirefoxTestBase : ITestDriver
     {
 
-        protected IDriver Driver { get; private set; }
+        public IDriver Driver { get; private set; }
 
         public void Start()
         {
