@@ -9,7 +9,7 @@ using TechTalk.SpecFlow;
 namespace SpecFlowTests.Acceptance_Tests
 {
     [Binding]
-    public class IngresarAChambaTePrestaSteps : FirefoxTestBase
+    public class IngresarAChambaTePrestaSteps : FirefoxTestDriver
     {
 
         private IChambaHome _homePage;

@@ -7,7 +7,7 @@ namespace SpecFlowTests.Utils
 {
 
  
-    public class FirefoxTestBase
+    public class FirefoxTestDriver
     {
 
         protected IDriver Driver { get; private set; }
