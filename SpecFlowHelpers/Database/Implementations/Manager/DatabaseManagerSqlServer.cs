@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SpecFlowHelpers.Configuration;
 using SpecFlowHelpers.Database.Definitions;
-using DbParameter = SpecFlowHelpers.Database.Definitions.DbParameter;
 
-namespace SpecFlowHelpers.Database.Implementations
+namespace SpecFlowHelpers.Database.Implementations.Manager
 {
     public class DatabaseManagerSqlServer : IDatabaseManager
     {

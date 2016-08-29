@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Diagnostics.CodeAnalysis;
 
-namespace SpecFlowHelpers.Database.Definitions
+namespace SpecFlowHelpers.Database.Implementations.Manager
 {
     public class DbParameter
     {

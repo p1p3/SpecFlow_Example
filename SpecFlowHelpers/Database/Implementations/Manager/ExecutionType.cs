@@ -1,4 +1,4 @@
-﻿namespace SpecFlowHelpers.Database.Definitions
+﻿namespace SpecFlowHelpers.Database.Implementations.Manager
 {
     public enum ExecutionType
     {

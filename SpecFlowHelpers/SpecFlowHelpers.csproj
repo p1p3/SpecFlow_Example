@@ -65,14 +65,14 @@
       <DependentUpon>Constants.resx</DependentUpon>
     </Compile>
     <Compile Include="Database\Definitions\DataFieldMappingAttribute.cs" />
-    <Compile Include="Database\Definitions\DbParameter.cs" />
-    <Compile Include="Database\Definitions\DefaultReaderEntityMapper.cs" />
-    <Compile Include="Database\Definitions\ExecutionType.cs" />
+    <Compile Include="Database\Implementations\Manager\DbParameter.cs" />
+    <Compile Include="Database\Implementations\Manager\DefaultReaderEntityMapper.cs" />
+    <Compile Include="Database\Implementations\Manager\ExecutionType.cs" />
     <Compile Include="Database\Definitions\ICoreFunctions.cs" />
     <Compile Include="Database\Definitions\IDatabaseManager.cs" />
     <Compile Include="Database\Definitions\IDataReaderEntityMapper.cs" />
     <Compile Include="Database\Definitions\ITeprestaFunctions.cs" />
-    <Compile Include="Database\Implementations\DatabaseManagerSqlServer.cs" />
+    <Compile Include="Database\Implementations\Manager\DatabaseManagerSqlServer.cs" />
     <Compile Include="Drivers\IDriver.cs" />
     <Compile Include="Pages\IChambaDashboard.cs" />
     <Compile Include="Pages\IPage.cs" />

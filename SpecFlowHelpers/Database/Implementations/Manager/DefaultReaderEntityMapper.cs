@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Reflection;
+using SpecFlowHelpers.Database.Definitions;
 
-namespace SpecFlowHelpers.Database.Definitions
+namespace SpecFlowHelpers.Database.Implementations.Manager
 {
     public class DefaultReaderEntityMapper<TEntity> : IDataReaderEntityMapper<TEntity> where TEntity : new()
     {

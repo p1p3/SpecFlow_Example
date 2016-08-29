@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using SpecFlowHelpers.Database.Implementations;
+using SpecFlowHelpers.Database.Implementations.Manager;
 
 namespace SpecFlowHelpers.Database.Definitions
 {
