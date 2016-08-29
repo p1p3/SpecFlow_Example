@@ -47,6 +47,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,11 +57,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\AppConfiguration.cs" />
+    <Compile Include="Configuration\IAppConfiguration.cs" />
     <Compile Include="Constants.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Constants.resx</DependentUpon>
     </Compile>
+    <Compile Include="Database\Definitions\DataFieldMappingAttribute.cs" />
+    <Compile Include="Database\Definitions\DbParameter.cs" />
+    <Compile Include="Database\Definitions\DefaultReaderEntityMapper.cs" />
+    <Compile Include="Database\Definitions\ExecutionType.cs" />
+    <Compile Include="Database\Definitions\ICoreFunctions.cs" />
+    <Compile Include="Database\Definitions\IDatabaseManager.cs" />
+    <Compile Include="Database\Definitions\IDataReaderEntityMapper.cs" />
+    <Compile Include="Database\Definitions\ITeprestaFunctions.cs" />
+    <Compile Include="Database\Implementations\DatabaseManagerSqlServer.cs" />
     <Compile Include="Drivers\IDriver.cs" />
     <Compile Include="Pages\IChambaDashboard.cs" />
     <Compile Include="Pages\IPage.cs" />

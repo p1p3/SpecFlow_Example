@@ -132,4 +132,13 @@
   <data name="ChambaUser" xml:space="preserve">
     <value>ana.ocampo@ceiba.com.co</value>
   </data>
+  <data name="PinSMS" xml:space="preserve">
+    <value>1000</value>
+  </data>
+  <data name="SignUpUserEmail" xml:space="preserve">
+    <value>testing1@ceiba.com</value>
+  </data>
+  <data name="SignUpUserId" xml:space="preserve">
+    <value>022802339</value>
+  </data>
 </root>

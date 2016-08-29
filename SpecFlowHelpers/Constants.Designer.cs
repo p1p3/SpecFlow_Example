@@ -104,5 +104,32 @@ namespace SpecFlowHelpers {
                 return ResourceManager.GetString("ChambaUser", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1000.
+        /// </summary>
+        public static string PinSMS {
+            get {
+                return ResourceManager.GetString("PinSMS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to testing1@ceiba.com.
+        /// </summary>
+        public static string SignUpUserEmail {
+            get {
+                return ResourceManager.GetString("SignUpUserEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 022802339.
+        /// </summary>
+        public static string SignUpUserId {
+            get {
+                return ResourceManager.GetString("SignUpUserId", resourceCulture);
+            }
+        }
     }
 }
