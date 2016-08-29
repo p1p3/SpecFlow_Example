@@ -9,22 +9,22 @@ using SpecFlowHelpers.Pages;
 
 namespace SeleniumWebDriver.Pages
 {
-    public class ChambaHome : IChambaHome
+    public class TePrestaDashboard : ITePrestaDashboard
     {
+
         private readonly IWebDriver _driver;
         public string Address { get; set; }
 
-        public ChambaHome(IWebDriver driver)
+        public TePrestaDashboard(IWebDriver driver)
         {
             _driver = driver;
-            Address = Constants.BaseAddress;
+            Address = string.Concat(Constants.BaseAddress, Constants.ChambaDashboard);
         }
 
-        public IChambaLogin ClickIngresar()
+        public string MensajeBienvenida()
         {
-            var loginButton = _driver.FindElement(By.Id("loginLink"));
-            loginButton.Click();
-            return new ChambaLogin(_driver);
+            var userName = _driver.FindElement(By.CssSelector(".user-name li"));
+            return userName.Text;
         }
 
     }

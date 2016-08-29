@@ -9,11 +9,11 @@ using SpecFlowHelpers.Pages;
 
 namespace SeleniumWebDriver.Pages
 {
-    public class ChambaLogin : IChambaLogin
+    public class TePrestaLogin : ITePrestaLogin
     {
         private readonly IWebDriver _driver;
         public string Address { get; set; }
-        public ChambaLogin(IWebDriver driver)
+        public TePrestaLogin(IWebDriver driver)
         {
             _driver = driver;
             Address = string.Concat(Constants.BaseAddress, Constants.ChambaLogin);
@@ -33,11 +33,11 @@ namespace SeleniumWebDriver.Pages
             passwordTextBox.SendKeys(password);
         }
 
-        public IChambaDashboard Ingresar()
+        public ITePrestaDashboard Ingresar()
         {
             var loginButton = _driver.FindElement(By.Id("login-password"));
             loginButton.Click();
-            return new ChambaDashboard(_driver);
+            return new TePrestaDashboard(_driver);
         }
     }
 }

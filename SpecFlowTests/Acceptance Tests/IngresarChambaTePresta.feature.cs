@@ -68,24 +68,24 @@ namespace SpecFlowTests.AcceptanceTests
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Ingresar a Chamba te presta")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Ingresar a te presta")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Ingresar a Chamba te presta")]
-        public virtual void IngresarAChambaTePresta()
+        public virtual void IngresarATePresta()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ingresar a Chamba te presta", ((string[])(null)));
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ingresar a te presta", ((string[])(null)));
+#line 3
 this.ScenarioSetup(scenarioInfo);
+#line 4
+ testRunner.Given("he ingresado a te presta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line 5
- testRunner.Given("he ingresado a Chamba te presta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
-#line 6
   testRunner.And("he presionado Ingresar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
-#line 7
+#line 6
   testRunner.And("he ingresado el correo electrónico", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
-#line 8
+#line 7
   testRunner.And("he ingresado mi contraseña", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
-#line 9
+#line 8
  testRunner.When("presiono Ingresar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Cuando ");
-#line 10
+#line 9
  testRunner.Then("debo ver \"Bienvenido(a): JUAN RICARDO DELGADO GALVEZ\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entonces ");
 #line hidden
             this.ScenarioCleanup();

@@ -70,47 +70,20 @@ namespace SpecFlowHelpers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /chamba/Customer.
+        ///   Looks up a localized string similar to 1000.
         /// </summary>
-        public static string ChambaDashboard {
+        public static string PinSMS {
             get {
-                return ResourceManager.GetString("ChambaDashboard", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to /Security/login.
-        /// </summary>
-        public static string ChambaLogin {
-            get {
-                return ResourceManager.GetString("ChambaLogin", resourceCulture);
+                return ResourceManager.GetString("PinSMS", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Abc12345.
         /// </summary>
-        public static string ChambaPassword {
+        public static string SignInPassword {
             get {
-                return ResourceManager.GetString("ChambaPassword", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ana.ocampo@ceiba.com.co.
-        /// </summary>
-        public static string ChambaUser {
-            get {
-                return ResourceManager.GetString("ChambaUser", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 1000.
-        /// </summary>
-        public static string PinSMS {
-            get {
-                return ResourceManager.GetString("PinSMS", resourceCulture);
+                return ResourceManager.GetString("SignInPassword", resourceCulture);
             }
         }
         
@@ -129,6 +102,24 @@ namespace SpecFlowHelpers {
         public static string SignUpUserId {
             get {
                 return ResourceManager.GetString("SignUpUserId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /chamba/Customer.
+        /// </summary>
+        public static string TePrestaDashboard {
+            get {
+                return ResourceManager.GetString("TePrestaDashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /Security/login.
+        /// </summary>
+        public static string TePrestaLogin {
+            get {
+                return ResourceManager.GetString("TePrestaLogin", resourceCulture);
             }
         }
     }

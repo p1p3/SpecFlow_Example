@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpecFlowHelpers.Pages
 {
-    public interface IChambaLogin:IPage
+    public interface ITePrestaEstadoCuenta
     {
-        void SetEmail(string email);
-        void SetPassword(string password);
-        IChambaDashboard Ingresar();
     }
 }

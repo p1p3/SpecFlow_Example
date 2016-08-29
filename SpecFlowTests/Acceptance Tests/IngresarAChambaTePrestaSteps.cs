@@ -15,20 +15,15 @@ namespace SpecFlowTests.Acceptance_Tests
         private readonly ITestDriver _testDriver;
         private readonly ITeprestaFunctions _teprestaFunctions;
 
-        private IChambaHome _homePage;
-        private IChambaLogin _chambaLogin;
-        private IChambaDashboard _chambaDashboard;
-
-        public IngresarAChambaTePrestaSteps(ITestDriver testDriver, ITeprestaFunctions teprestaFunctions1)
+        public IngresarAChambaTePrestaSteps(ITestDriver testDriver, ITeprestaFunctions teprestaFunctions)
         {
             _testDriver = testDriver;
-            _teprestaFunctions = teprestaFunctions1;
+            _teprestaFunctions = teprestaFunctions;
         }
 
         [BeforeScenario]
         public void Setup()
         {
-            _teprestaFunctions.DeleteUser(Constants.SignUpUserEmail);
             _testDriver.Start();
         }
 
@@ -38,40 +33,48 @@ namespace SpecFlowTests.Acceptance_Tests
             _testDriver.Stop();
         }
 
-        [Given(@"he ingresado a Chamba te presta")]
+        [Given(@"he ingresado a te presta")]
         public void DadoHeIngresadoAChambaTePresta()
         {
-            _homePage = _testDriver.Driver.NavigateToHomePage();
+            var homePage = _testDriver.Driver.NavigateToHomePage();
+            ScenarioContext.Current.Set<ITePrestaHome>(homePage);
         }
 
         [Given(@"he presionado Ingresar")]
         public void DadoHePresionadoIngresar()
         {
-            _chambaLogin = _homePage.ClickIngresar();
+            var homePage = ScenarioContext.Current.Get<ITePrestaHome>();
+            var tePrestaLogin = homePage.ClickIngresar();
+            ScenarioContext.Current.Set<ITePrestaLogin>(tePrestaLogin);
         }
 
         [Given(@"he ingresado el correo electrónico")]
         public void DadoHeIngresadoElCorreoElectronico()
         {
-            _chambaLogin.SetEmail(Constants.ChambaUser);
+            var tePrestaLogin = ScenarioContext.Current.Get<ITePrestaLogin>();
+            tePrestaLogin.SetEmail(Constants.SignUpUserEmail);
         }
 
         [Given(@"he ingresado mi contraseña")]
         public void DadoHeIngresadoMiContrasena()
         {
-            _chambaLogin.SetPassword(Constants.ChambaPassword);
+            var tePrestaLogin = ScenarioContext.Current.Get<ITePrestaLogin>();
+            tePrestaLogin.SetPassword(Constants.SignInPassword);
         }
 
         [When(@"presiono Ingresar")]
         public void CuandoPresionoIngresar()
         {
-            _chambaDashboard = _chambaLogin.Ingresar();
+            var tePrestaLogin = ScenarioContext.Current.Get<ITePrestaLogin>();
+            var tePrestaDashboard = tePrestaLogin.Ingresar();
+            ScenarioContext.Current.Set<ITePrestaDashboard>(tePrestaDashboard);
         }
 
         [Then(@"debo ver ""(.*)""")]
         public void EntoncesDeboVer(string p0)
         {
-            Assert.AreEqual(p0, _chambaDashboard.MensajeBienvenida());
+            var tePrestaDashboard = ScenarioContext.Current.Get<ITePrestaDashboard>();
+            Assert.AreEqual(p0, tePrestaDashboard.MensajeBienvenida());
         }
     }
 }

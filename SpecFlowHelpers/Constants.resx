@@ -120,25 +120,22 @@
   <data name="BaseAddress" xml:space="preserve">
     <value>http://sucursalvirtualdllo.cloudapp.net</value>
   </data>
-  <data name="ChambaDashboard" xml:space="preserve">
-    <value>/chamba/Customer</value>
-  </data>
-  <data name="ChambaLogin" xml:space="preserve">
-    <value>/Security/login</value>
-  </data>
-  <data name="ChambaPassword" xml:space="preserve">
-    <value>Abc12345</value>
-  </data>
-  <data name="ChambaUser" xml:space="preserve">
-    <value>ana.ocampo@ceiba.com.co</value>
-  </data>
   <data name="PinSMS" xml:space="preserve">
     <value>1000</value>
+  </data>
+  <data name="SignInPassword" xml:space="preserve">
+    <value>Abc12345</value>
   </data>
   <data name="SignUpUserEmail" xml:space="preserve">
     <value>testing1@ceiba.com</value>
   </data>
   <data name="SignUpUserId" xml:space="preserve">
     <value>022802339</value>
+  </data>
+  <data name="TePrestaDashboard" xml:space="preserve">
+    <value>/chamba/Customer</value>
+  </data>
+  <data name="TePrestaLogin" xml:space="preserve">
+    <value>/Security/login</value>
   </data>
 </root>

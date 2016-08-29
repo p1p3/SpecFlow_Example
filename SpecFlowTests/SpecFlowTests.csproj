@@ -81,6 +81,12 @@
       <DependentUpon>IngresarChambaTePresta.feature</DependentUpon>
     </Compile>
     <Compile Include="Acceptance Tests\IngresarAChambaTePrestaSteps.cs" />
+    <Compile Include="Acceptance Tests\RegistroTePresta.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistroTePresta.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Acceptance Tests\RegistroTePrestaSteps.cs" />
     <Compile Include="Utils\DependenciesTest.cs" />
     <Compile Include="Utils\FirefoxTestDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +96,10 @@
     <None Include="Acceptance Tests\IngresarChambaTePresta.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>IngresarChambaTePresta.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Acceptance Tests\RegistroTePresta.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RegistroTePresta.feature.cs</LastGenOutput>
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />

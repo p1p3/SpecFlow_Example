@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SpecFlowHelpers.Pages
 {
-    public interface IChambaDashboard:IPage
+    public interface ITePrestaRegistroPreguntasPersonalizadas
     {
-        string MensajeBienvenida();
+        void ResponderPreguntas(params string[] respuestas);
     }
 }

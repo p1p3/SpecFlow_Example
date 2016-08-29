@@ -76,10 +76,16 @@
     <Compile Include="Database\Implementations\Manager\DatabaseManagerSqlServer.cs" />
     <Compile Include="Database\Implementations\TeprestaFunctions.cs" />
     <Compile Include="Drivers\IDriver.cs" />
-    <Compile Include="Pages\IChambaDashboard.cs" />
+    <Compile Include="Pages\ITePrestaDashboard.cs" />
     <Compile Include="Pages\IPage.cs" />
-    <Compile Include="Pages\IChambaHome.cs" />
-    <Compile Include="Pages\IChambaLogin.cs" />
+    <Compile Include="Pages\ITePrestaEstadoCuenta.cs" />
+    <Compile Include="Pages\ITePrestaHome.cs" />
+    <Compile Include="Pages\ITePrestaLogin.cs" />
+    <Compile Include="Pages\ITePrestaRegistroPreguntasPersonalizadas.cs" />
+    <Compile Include="Pages\ITePrestaRegistroPreguntasSeguridad.cs" />
+    <Compile Include="Pages\ITePrestaRegistroVerificacionCelular.cs" />
+    <Compile Include="Pages\ITePrestaSolicitarContrasenha.cs" />
+    <Compile Include="Pages\ITePrestaVerificacionCodigo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

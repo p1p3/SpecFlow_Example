@@ -21,14 +21,14 @@ namespace SeleniumWebDriver.Drivers
         #region Members
         private readonly TimeSpan _turnOnWaitTime;
         private readonly IWebDriver _webDriver;
-        private IChambaHome _homePage;
+        private ITePrestaHome _homePage;
         #endregion
 
         #region Implementation of IDriver
 
         public void Initialize()
         {
-            _homePage = new ChambaHome(_webDriver);
+            _homePage = new TePrestaHome(_webDriver);
             _webDriver.Manage().Window.Maximize();
         }
 
@@ -38,7 +38,7 @@ namespace SeleniumWebDriver.Drivers
             _webDriver.Navigate().GoToUrl(page.Address);
         }
 
-        public IChambaHome NavigateToHomePage()
+        public ITePrestaHome NavigateToHomePage()
         {
             NavigateTo(_homePage);
             return _homePage;

@@ -6,7 +6,7 @@ namespace SpecFlowHelpers.Drivers
     {
         void Initialize();
         void NavigateTo(IPage page);
-        IChambaHome NavigateToHomePage();
+        ITePrestaHome NavigateToHomePage();
         void Close();
     }
 }
