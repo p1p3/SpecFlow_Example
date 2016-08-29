@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using SpecFlowHelpers.Database.Implementations;
 using SpecFlowHelpers.Database.Implementations.Manager;
 
-namespace SpecFlowHelpers.Database.Definitions
+namespace SpecFlowHelpers.Database.Definitions.Manager
 {
 
     public interface IDatabaseManager : IDisposable
@@ -12,7 +11,7 @@ namespace SpecFlowHelpers.Database.Definitions
 
         ICollection<DbParameter> OutParameters { get; }
 
-        void ExecuteNonQuery(string procedureName, IEnumerable<DbParameter> parameters);
+        void ExecuteNonQuery(string procedureName, IEnumerable<DbParameter> parameters, ExecutionType executionType);
 
         /// <summary>
         ///  executes list query stored procedure without parameters

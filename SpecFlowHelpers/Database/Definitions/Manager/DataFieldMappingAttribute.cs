@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SpecFlowHelpers.Database.Definitions
+namespace SpecFlowHelpers.Database.Definitions.Manager
 {
     [global::System.AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
     public sealed class DataFieldMappingAttribute : Attribute

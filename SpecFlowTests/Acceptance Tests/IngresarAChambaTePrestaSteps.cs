@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumWebDriver.Drivers;
 using SpecFlowHelpers;
+using SpecFlowHelpers.Database.Definitions;
 using SpecFlowHelpers.Pages;
 using SpecFlowTests.Utils;
 using TechTalk.SpecFlow;
@@ -12,18 +13,22 @@ namespace SpecFlowTests.Acceptance_Tests
     public class IngresarAChambaTePrestaSteps
     {
         private readonly ITestDriver _testDriver;
+        private readonly ITeprestaFunctions _teprestaFunctions;
+
         private IChambaHome _homePage;
         private IChambaLogin _chambaLogin;
         private IChambaDashboard _chambaDashboard;
 
-        public IngresarAChambaTePrestaSteps(ITestDriver testDriver)
+        public IngresarAChambaTePrestaSteps(ITestDriver testDriver, ITeprestaFunctions teprestaFunctions1)
         {
             _testDriver = testDriver;
+            _teprestaFunctions = teprestaFunctions1;
         }
 
         [BeforeScenario]
         public void Setup()
         {
+            _teprestaFunctions.DeleteUser(Constants.SignUpUserEmail);
             _testDriver.Start();
         }
 

@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace SpecFlowHelpers.Database.Definitions
+namespace SpecFlowHelpers.Database.Definitions.Manager
 {
     public interface IDataReaderEntityMapper<out TEntity>
     {

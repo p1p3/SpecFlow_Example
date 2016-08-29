@@ -2,6 +2,7 @@
 using System.Data;
 using System.Reflection;
 using SpecFlowHelpers.Database.Definitions;
+using SpecFlowHelpers.Database.Definitions.Manager;
 
 namespace SpecFlowHelpers.Database.Implementations.Manager
 {

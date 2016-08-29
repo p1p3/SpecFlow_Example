@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,15 +65,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Constants.resx</DependentUpon>
     </Compile>
-    <Compile Include="Database\Definitions\DataFieldMappingAttribute.cs" />
+    <Compile Include="Database\Definitions\Manager\DataFieldMappingAttribute.cs" />
     <Compile Include="Database\Implementations\Manager\DbParameter.cs" />
     <Compile Include="Database\Implementations\Manager\DefaultReaderEntityMapper.cs" />
     <Compile Include="Database\Implementations\Manager\ExecutionType.cs" />
     <Compile Include="Database\Definitions\ICoreFunctions.cs" />
-    <Compile Include="Database\Definitions\IDatabaseManager.cs" />
-    <Compile Include="Database\Definitions\IDataReaderEntityMapper.cs" />
+    <Compile Include="Database\Definitions\Manager\IDatabaseManager.cs" />
+    <Compile Include="Database\Definitions\Manager\IDataReaderEntityMapper.cs" />
     <Compile Include="Database\Definitions\ITeprestaFunctions.cs" />
     <Compile Include="Database\Implementations\Manager\DatabaseManagerSqlServer.cs" />
+    <Compile Include="Database\Implementations\TeprestaFunctions.cs" />
     <Compile Include="Drivers\IDriver.cs" />
     <Compile Include="Pages\IChambaDashboard.cs" />
     <Compile Include="Pages\IPage.cs" />

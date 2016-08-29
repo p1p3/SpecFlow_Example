@@ -7,6 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using SpecFlowHelpers.Configuration;
 using SpecFlowHelpers.Database.Definitions;
+using SpecFlowHelpers.Database.Definitions.Manager;
 
 namespace SpecFlowHelpers.Database.Implementations.Manager
 {
@@ -14,7 +15,7 @@ namespace SpecFlowHelpers.Database.Implementations.Manager
     {
         #region Data Members
 
-        private bool _disposed;
+        public bool Disposed;
 
         #endregion
 
@@ -31,11 +32,6 @@ namespace SpecFlowHelpers.Database.Implementations.Manager
         #endregion
 
         #region Constructor
-
-        [ExcludeFromCodeCoverage]
-        public DatabaseManagerSqlServer()
-            : this(ConfigurationManager.ConnectionStrings["SucursalVirtualSqlServer"].ConnectionString, new AppConfiguration())
-        { }
 
         public DatabaseManagerSqlServer(string connectionString, IAppConfiguration settings)
         {
@@ -164,24 +160,7 @@ namespace SpecFlowHelpers.Database.Implementations.Manager
             return reportDataItems;
         }
 
-        /// <summary>
-        /// executes stored procedure with DB parameteres if they are passed
-        /// </summary>
-        /// <param name="procedureName"></param>
-        /// <param name="executeType"></param>
-        /// <param name="parameters"></param>
-        /// <returns></returns>
-        [ExcludeFromCodeCoverage]
-        private IDataReader ExecuteProcedure(string procedureName, IEnumerable<DbParameter> parameters)
-        {
-            IDataReader reader = null;
-
-            reader = (IDataReader)this.Execute(procedureName, ExecutionType.Procedure, parameters);
-
-            return reader;
-        }
-
-        #endregion
+    #endregion
 
         #region IDatabaseManager Members
 
@@ -196,12 +175,12 @@ namespace SpecFlowHelpers.Database.Implementations.Manager
             return this.Execute(procedureName, ExecutionType.Scalar, parameters);
         }
 
-        [ExcludeFromCodeCoverage]
-        public void ExecuteNonQuery(string procedureName, IEnumerable<DbParameter> parameters)
+   
+        public void ExecuteNonQuery(string procedureName, IEnumerable<DbParameter> parameters, ExecutionType executionType)
         {
             if (_connection != null)
             {
-                this.Execute(procedureName, ExecutionType.NonQuery, parameters);
+                this.Execute(procedureName, executionType, parameters);
             }
 
             UpdateOutParameters();
@@ -279,7 +258,7 @@ namespace SpecFlowHelpers.Database.Implementations.Manager
                     this._connection = null;
                 }
 
-                this._disposed = true;
+                this.Disposed = true;
             }
         }
 
