@@ -70,6 +70,15 @@ namespace SpecFlowHelpers {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 44444444.
+        /// </summary>
+        public static string SignUpCellPhone {
+            get {
+                return ResourceManager.GetString("SignUpCellPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to testing1@ceiba.com.
         /// </summary>
         public static string SignUpEmail {

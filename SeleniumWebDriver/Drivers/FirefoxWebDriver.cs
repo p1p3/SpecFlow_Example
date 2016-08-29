@@ -13,7 +13,7 @@ namespace SeleniumWebDriver.Drivers
     {
         public FirefoxWebDriver()
         {
-            _turnOnWaitTime = TimeSpan.FromSeconds(40);
+            _turnOnWaitTime = TimeSpan.FromSeconds(120);
             _webDriver = new FirefoxDriver();
             TurnOnWait();
         }

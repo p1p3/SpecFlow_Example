@@ -13,7 +13,8 @@ Escenario: Registro usuario con teléfono diferente
 	 Y he presionado enviar código de verificación
 	 Y he ingresado el código recibido en mi celular
 	 Y he presionado verificar
-	 Y he ingresado mi correo electrónico
+	 Y he ingresado mi correo electrónico 
+	 Y he presionado continuar 
 	 Y he dado respuesta a las preguntas de seguridad
 	 Y he ingresado mi contraseña de registro
 	 Y he confirmado mi contraseña de registro

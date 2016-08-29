@@ -120,6 +120,9 @@
   <data name="PinSMS" xml:space="preserve">
     <value>1000</value>
   </data>
+  <data name="SignUpCellPhone" xml:space="preserve">
+    <value>44444444</value>
+  </data>
   <data name="SignUpEmail" xml:space="preserve">
     <value>testing1@ceiba.com</value>
   </data>
