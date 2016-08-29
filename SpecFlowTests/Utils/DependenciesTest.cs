@@ -21,8 +21,10 @@ namespace SpecFlowTests.Utils
             container.RegisterType<IDriver, FirefoxWebDriver>();
             container.RegisterType<ITestDriver, FirefoxTestBase>();
 
-           // container.RegisterTypes(typeof(TestDependencies).Assembly.GetTypes().Where(t => Attribute.IsDefined(t, typeof(BindingAttribute))).ToArray()).SingleInstance();
+            container.RegisterTypes(typeof(DependenciesTest).Assembly.GetTypes().Where(t => Attribute.IsDefined(t, typeof(BindingAttribute))).ToArray(), getLifetimeManager: WithLifetime.ContainerControlled);
             return container;
         }
+
+
     }
 }
