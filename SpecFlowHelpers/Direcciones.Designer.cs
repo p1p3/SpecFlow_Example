@@ -22,14 +22,14 @@ namespace SpecFlowHelpers {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Constants {
+    public class Direcciones {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Constants() {
+        internal Direcciones() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SpecFlowHelpers {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SpecFlowHelpers.Constants", typeof(Constants).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SpecFlowHelpers.Direcciones", typeof(Direcciones).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,56 @@ namespace SpecFlowHelpers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1000.
+        ///   Looks up a localized string similar to http://sucursalvirtualdllo.cloudapp.net.
         /// </summary>
-        public static string PinSMS {
+        public static string BaseAddress {
             get {
-                return ResourceManager.GetString("PinSMS", resourceCulture);
+                return ResourceManager.GetString("BaseAddress", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to testing1@ceiba.com.
+        ///   Looks up a localized string similar to /chamba/Customer.
         /// </summary>
-        public static string SignUpEmail {
+        public static string TePrestaDashboard {
             get {
-                return ResourceManager.GetString("SignUpEmail", resourceCulture);
+                return ResourceManager.GetString("TePrestaDashboard", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abc12345.
+        ///   Looks up a localized string similar to /Security/login.
         /// </summary>
-        public static string SignUpPassword {
+        public static string TePrestaLogin {
             get {
-                return ResourceManager.GetString("SignUpPassword", resourceCulture);
+                return ResourceManager.GetString("TePrestaLogin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 022802339.
+        ///   Looks up a localized string similar to /Security/Register.
         /// </summary>
-        public static string SignUpUserId {
+        public static string TePrestaRegistroContrasenha {
             get {
-                return ResourceManager.GetString("SignUpUserId", resourceCulture);
+                return ResourceManager.GetString("TePrestaRegistroContrasenha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /UserSecurityQuestions.
+        /// </summary>
+        public static string TePrestaRegistroPreguntasSeguridad {
+            get {
+                return ResourceManager.GetString("TePrestaRegistroPreguntasSeguridad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /Security/VerifyCellPhone.
+        /// </summary>
+        public static string TePrestaRegistroVerificacionCelular {
+            get {
+                return ResourceManager.GetString("TePrestaRegistroVerificacionCelular", resourceCulture);
             }
         }
     }

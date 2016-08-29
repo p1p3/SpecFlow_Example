@@ -52,14 +52,14 @@ namespace SpecFlowTests.Acceptance_Tests
         public void DadoHeIngresadoElCorreoElectronico()
         {
             var tePrestaLogin = ScenarioContext.Current.Get<ITePrestaLogin>();
-            tePrestaLogin.SetEmail(Constants.SignUpUserEmail);
+            tePrestaLogin.SetEmail(Constants.SignUpEmail);
         }
 
         [Given(@"he ingresado mi contraseña")]
         public void DadoHeIngresadoMiContrasena()
         {
             var tePrestaLogin = ScenarioContext.Current.Get<ITePrestaLogin>();
-            tePrestaLogin.SetPassword(Constants.SignInPassword);
+            tePrestaLogin.SetPassword(Constants.SignUpPassword);
         }
 
         [When(@"presiono Ingresar")]

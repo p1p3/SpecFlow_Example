@@ -75,6 +75,11 @@
     <Compile Include="Database\Definitions\ITeprestaFunctions.cs" />
     <Compile Include="Database\Implementations\Manager\DatabaseManagerSqlServer.cs" />
     <Compile Include="Database\Implementations\TeprestaFunctions.cs" />
+    <Compile Include="Direcciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Direcciones.resx</DependentUpon>
+    </Compile>
     <Compile Include="Drivers\IDriver.cs" />
     <Compile Include="Pages\ITePrestaDashboard.cs" />
     <Compile Include="Pages\IPage.cs" />
@@ -84,8 +89,7 @@
     <Compile Include="Pages\ITePrestaRegistroPreguntasPersonalizadas.cs" />
     <Compile Include="Pages\ITePrestaRegistroPreguntasSeguridad.cs" />
     <Compile Include="Pages\ITePrestaRegistroVerificacionCelular.cs" />
-    <Compile Include="Pages\ITePrestaSolicitarContrasenha.cs" />
-    <Compile Include="Pages\ITePrestaVerificacionCodigo.cs" />
+    <Compile Include="Pages\ITePrestaRegistroSolicitarContrasenha.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +99,10 @@
     <EmbeddedResource Include="Constants.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Constants.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Direcciones.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Direcciones.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

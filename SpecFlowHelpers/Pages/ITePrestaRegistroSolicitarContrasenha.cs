@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpecFlowHelpers.Pages
 {
-    public interface ITePrestaSolicitarContrasenha
+    public interface ITePrestaRegistroSolicitarContrasenha
     {
         void IngresarContrasenha(string password);
         void IngresarConfirmacionContrasena(string password);

@@ -9,6 +9,6 @@ namespace SpecFlowHelpers.Pages
     public interface ITePrestaRegistroPreguntasSeguridad
     {
         void ResponderPreguntas(params int[] respuestas);
-        ITePrestaSolicitarContrasenha ClickValidar();
+        ITePrestaRegistroSolicitarContrasenha ClickValidar();
     }
 }

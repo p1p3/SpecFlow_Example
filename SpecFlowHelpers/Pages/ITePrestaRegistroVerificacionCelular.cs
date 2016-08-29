@@ -11,6 +11,10 @@ namespace SpecFlowHelpers.Pages
         void IngresarDocumentoIdentidad(string documento);
         void IngresarConfirmacionDocumento(string documento);
         void IngresoNumeroCelular(string celular);
-        ITePrestaVerificacionCodigo ClickEnviarCodigoVerificacion();
+        void ClickEnviarCodigoVerificacion();
+        void IngresarCodigoVerificacion(string codigo);
+        void ClickVerificar();
+        void IngresarCorreoElectronico(string email);
+        ITePrestaRegistroPreguntasSeguridad ClickContinuar();
     }
 }

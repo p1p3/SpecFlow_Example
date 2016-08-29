@@ -117,16 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PinSMS" xml:space="preserve">
-    <value>1000</value>
+  <data name="BaseAddress" xml:space="preserve">
+    <value>http://sucursalvirtualdllo.cloudapp.net</value>
   </data>
-  <data name="SignUpEmail" xml:space="preserve">
-    <value>testing1@ceiba.com</value>
+  <data name="TePrestaDashboard" xml:space="preserve">
+    <value>/chamba/Customer</value>
   </data>
-  <data name="SignUpPassword" xml:space="preserve">
-    <value>Abc12345</value>
+  <data name="TePrestaLogin" xml:space="preserve">
+    <value>/Security/login</value>
   </data>
-  <data name="SignUpUserId" xml:space="preserve">
-    <value>022802339</value>
+  <data name="TePrestaRegistroContrasenha" xml:space="preserve">
+    <value>/Security/Register</value>
+  </data>
+  <data name="TePrestaRegistroPreguntasSeguridad" xml:space="preserve">
+    <value>/UserSecurityQuestions</value>
+  </data>
+  <data name="TePrestaRegistroVerificacionCelular" xml:space="preserve">
+    <value>/Security/VerifyCellPhone</value>
   </data>
 </root>

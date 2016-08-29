@@ -9,22 +9,14 @@ using SpecFlowHelpers.Pages;
 
 namespace SeleniumWebDriver.Pages
 {
-    public class TePrestaDashboard : ITePrestaDashboard
+    public class TePrestaEstadoCuenta : ITePrestaEstadoCuenta
     {
-
         private readonly IWebDriver _driver;
         public string Address { get; set; }
-
-        public TePrestaDashboard(IWebDriver driver)
+        public TePrestaEstadoCuenta(IWebDriver driver)
         {
             _driver = driver;
-            Address = string.Concat(Direcciones.BaseAddress, Direcciones.TePrestaDashboard);
-        }
-
-        public string MensajeBienvenida()
-        {
-            var userName = _driver.FindElement(By.CssSelector(".user-name li"));
-            return userName.Text;
+            Address = string.Concat(Direcciones.BaseAddress, Direcciones.TePrestaRegistroContrasenha);
         }
 
     }

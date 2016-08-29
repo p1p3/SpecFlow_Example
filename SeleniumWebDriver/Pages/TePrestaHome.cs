@@ -17,7 +17,7 @@ namespace SeleniumWebDriver.Pages
         public TePrestaHome(IWebDriver driver)
         {
             _driver = driver;
-            Address = Constants.BaseAddress;
+            Address = Direcciones.BaseAddress;
         }
 
         public ITePrestaLogin ClickIngresar()
@@ -27,5 +27,11 @@ namespace SeleniumWebDriver.Pages
             return new TePrestaLogin(_driver);
         }
 
+        public ITePrestaRegistroVerificacionCelular ClickRegistrarse()
+        {
+            var signUpButton = _driver.FindElement(By.Id("registerLink"));
+            signUpButton.Click();
+            return new TePrestaRegistroVerificacionCelular(_driver);
+        }
     }
 }

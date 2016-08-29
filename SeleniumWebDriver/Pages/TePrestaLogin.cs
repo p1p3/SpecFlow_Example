@@ -16,7 +16,7 @@ namespace SeleniumWebDriver.Pages
         public TePrestaLogin(IWebDriver driver)
         {
             _driver = driver;
-            Address = string.Concat(Constants.BaseAddress, Constants.ChambaLogin);
+            Address = string.Concat(Direcciones.BaseAddress, Direcciones.TePrestaLogin);
         }
 
         public void SetEmail(string email)

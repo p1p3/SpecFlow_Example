@@ -53,8 +53,13 @@
   <ItemGroup>
     <Compile Include="Drivers\FirefoxWebDriver.cs" />
     <Compile Include="Pages\TePrestaDashboard.cs" />
+    <Compile Include="Pages\TePrestaEstadoCuenta.cs" />
     <Compile Include="Pages\TePrestaHome.cs" />
     <Compile Include="Pages\TePrestaLogin.cs" />
+    <Compile Include="Pages\TePrestaRegistroPreguntasPersonalizadas.cs" />
+    <Compile Include="Pages\TePrestaRegistroPreguntasSeguridad.cs" />
+    <Compile Include="Pages\TePrestaRegistroSolicitarContrasenha.cs" />
+    <Compile Include="Pages\TePrestaRegistroVerificacionCelular.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
