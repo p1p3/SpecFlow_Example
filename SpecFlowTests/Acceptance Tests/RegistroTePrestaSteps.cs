@@ -1,4 +1,5 @@
-﻿using SpecFlowHelpers;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SpecFlowHelpers;
 using SpecFlowHelpers.Database.Definitions;
 using SpecFlowHelpers.Pages;
 using SpecFlowTests.Utils;
@@ -44,14 +45,14 @@ namespace SpecFlowTests.Acceptance_Tests
         public void DadoHeIngresadoMiDocumentoUnicoDeIdentidad()
         {
             var tePrestaVerCel = ScenarioContext.Current.Get<ITePrestaRegistroVerificacionCelular>();
-            tePrestaVerCel.IngresarDocumentoIdentidad(Constants.SignUpUserId + "-9");
+            tePrestaVerCel.IngresarDocumentoIdentidad(Constants.SignUpUserId);
         }
 
         [Given(@"he confirmado mi número de documento")]
         public void DadoHeConfirmadoMiNumeroDeDocumento()
         {
             var tePrestaVerCel = ScenarioContext.Current.Get<ITePrestaRegistroVerificacionCelular>();
-            tePrestaVerCel.IngresarConfirmacionDocumento(Constants.SignUpUserId + "-9");
+            tePrestaVerCel.IngresarConfirmacionDocumento(Constants.SignUpUserId);
         }
 
         [Given(@"he ingresado un número celular diferente al registrado")]
@@ -101,37 +102,64 @@ namespace SpecFlowTests.Acceptance_Tests
         [Given(@"he dado respuesta a las preguntas de seguridad")]
         public void DadoHeDadoRespuestaALasPreguntasDeSeguridad()
         {
-            // ScenarioContext.Current.Pending();
+            var tePrestaPreguntasSeguridad = ScenarioContext.Current.Get<ITePrestaRegistroPreguntasSeguridad>();
+            var respuestas = new[] { 0, 0, 0, 0 };
+            tePrestaPreguntasSeguridad.ResponderPreguntas(respuestas);
         }
+
+        [Given(@"he presionado validar preguntas de seguridad")]
+        public void DadoHePresionadoValidarPreguntasDeSeguridad()
+        {
+            var tePrestaPreguntasSeguridad = ScenarioContext.Current.Get<ITePrestaRegistroPreguntasSeguridad>();
+            var tePrestaSolicitarContrasenha = tePrestaPreguntasSeguridad.ClickValidar();
+            ScenarioContext.Current.Set<ITePrestaRegistroSolicitarContrasenha>(tePrestaSolicitarContrasenha);
+        }
+
 
         [Given(@"he ingresado mi contraseña de registro")]
         public void DadoHeIngresadoMiContrasenaDeRegistro()
         {
-            // ScenarioContext.Current.Pending();
+            var tePrestaSolicitarContrasenha = ScenarioContext.Current.Get<ITePrestaRegistroSolicitarContrasenha>();
+            tePrestaSolicitarContrasenha.IngresarContrasenha(Constants.SignUpPassword);
         }
 
         [Given(@"he confirmado mi contraseña de registro")]
         public void DadoHeConfirmadoMiContrasenaDeRegistro()
         {
-            //ScenarioContext.Current.Pending();
+            var tePrestaSolicitarContrasenha = ScenarioContext.Current.Get<ITePrestaRegistroSolicitarContrasenha>();
+            tePrestaSolicitarContrasenha.IngresarConfirmacionContrasena(Constants.SignUpPassword);
+            var tePrestaPreguntasPersonalizadas = tePrestaSolicitarContrasenha.ClickSiguiente();
+            ScenarioContext.Current.Set<ITePrestaRegistroPreguntasPersonalizadas>(tePrestaPreguntasPersonalizadas);
         }
 
         [Given(@"he seleccionado las preguntas personalizadas para recuperar mi contraseña")]
         public void DadoHeSeleccionadoLasPreguntasPersonalizadasParaRecuperarMiContrasena()
         {
-            //ScenarioContext.Current.Pending();
+            var tePrestaPreguntasPersonalizadas = ScenarioContext.Current.Get<ITePrestaRegistroPreguntasPersonalizadas>();
+            var respuestas = new[] { "Respuesta pruebas", "Respuesta pruebas", "Respuesta pruebas", "Respuesta pruebas", "Respuesta pruebas" };
+            tePrestaPreguntasPersonalizadas.ResponderPreguntas(respuestas);
         }
 
-        [When(@"presione registrar")]
-        public void CuandoPresioneRegistrar()
+
+        [When(@"presione continuar para terminar el proceso de registro")]
+        public void CuandoPresioneContinuarParaTerminarElProcesoDeRegistro()
         {
-            //ScenarioContext.Current.Pending();
+            var tePrestaPreguntasPersonalizadas = ScenarioContext.Current.Get<ITePrestaRegistroPreguntasPersonalizadas>();
+            var tePrestaEstadoCuenta = tePrestaPreguntasPersonalizadas.ClickContinuar();
+            ScenarioContext.Current.Set<ITePrestaDashboard>(tePrestaEstadoCuenta);
         }
+
+
 
         [Then(@"debo ingresar exitosamente a mi estado de cuenta")]
         public void EntoncesDeboIngresarExitosamenteAMiEstadoDeCuenta()
         {
-            //ScenarioContext.Current.Pending();
+            var tePrestaDashBoard = ScenarioContext.Current.Get<ITePrestaDashboard>();
+            var msgBienvenida = tePrestaDashBoard.MensajeBienvenida();
+            var mensajeCorrecto = msgBienvenida.Contains(Constants.WelcomeMessage);
+            Assert.IsTrue(mensajeCorrecto);
         }
+
+
     }
 }

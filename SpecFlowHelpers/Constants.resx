@@ -120,6 +120,12 @@
   <data name="PinSMS" xml:space="preserve">
     <value>1000</value>
   </data>
+  <data name="SignInPassword" xml:space="preserve">
+    <value>Abc12345</value>
+  </data>
+  <data name="SignInUser" xml:space="preserve">
+    <value>ana.ocampo@ceiba.com.co</value>
+  </data>
   <data name="SignUpCellPhone" xml:space="preserve">
     <value>44444444</value>
   </data>
@@ -130,6 +136,9 @@
     <value>Abc12345</value>
   </data>
   <data name="SignUpUserId" xml:space="preserve">
-    <value>022802339</value>
+    <value>022802339-9</value>
+  </data>
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>Bienvenido(a):</value>
   </data>
 </root>

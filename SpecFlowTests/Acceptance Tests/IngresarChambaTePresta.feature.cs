@@ -86,7 +86,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.When("presiono Ingresar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Cuando ");
 #line 9
- testRunner.Then("debo ver \"Bienvenido(a): JUAN RICARDO DELGADO GALVEZ\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entonces ");
+ testRunner.Then("debo ver un mensaje de bienvenida", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entonces ");
 #line hidden
             this.ScenarioCleanup();
         }

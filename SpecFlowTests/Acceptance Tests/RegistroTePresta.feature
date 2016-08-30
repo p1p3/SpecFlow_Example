@@ -16,8 +16,9 @@ Escenario: Registro usuario con teléfono diferente
 	 Y he ingresado mi correo electrónico 
 	 Y he presionado continuar 
 	 Y he dado respuesta a las preguntas de seguridad
+	 Y he presionado validar preguntas de seguridad
 	 Y he ingresado mi contraseña de registro
 	 Y he confirmado mi contraseña de registro
 	 Y he seleccionado las preguntas personalizadas para recuperar mi contraseña
-	Cuando presione registrar
+	Cuando presione continuar para terminar el proceso de registro
 	Entonces debo ingresar exitosamente a mi estado de cuenta

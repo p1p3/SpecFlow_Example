@@ -9,6 +9,6 @@ namespace SpecFlowHelpers.Pages
     public interface ITePrestaRegistroPreguntasPersonalizadas
     {
         void ResponderPreguntas(params string[] respuestas);
-        ITePrestaEstadoCuenta ClickValidar();
+        ITePrestaDashboard ClickContinuar();
     }
 }

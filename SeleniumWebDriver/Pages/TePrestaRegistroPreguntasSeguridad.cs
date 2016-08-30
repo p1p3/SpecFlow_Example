@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using SpecFlowHelpers;
@@ -23,11 +24,15 @@ namespace SeleniumWebDriver.Pages
 
         public void ResponderPreguntas(params int[] respuestas)
         {
-            /* driver.FindElement(By.Id("Answers_0__Answer")).Click();
-            driver.FindElement(By.Id("Answers_1__Answer")).Click();
-            driver.FindElement(By.Id("Answers_2__Answer")).Click();
-            driver.FindElement(By.Id("Answers_3__Answer")).Click();
-            driver.FindElement(By.Id("validate-questionnaire")).Click();*/
+            var number = 0;
+            foreach (var respuesta in respuestas)
+            {
+                var cssFormat = ($"[name = 'Answers[{number}].Answer']");
+                var radioButton = _driver.FindElements(By.CssSelector(cssFormat))[respuesta];
+                Thread.Sleep(500);
+                radioButton.Click();
+                number++;
+            }
         }
 
         public ITePrestaRegistroSolicitarContrasenha ClickValidar()

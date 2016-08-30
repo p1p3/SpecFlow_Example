@@ -52,14 +52,14 @@ namespace SpecFlowTests.Acceptance_Tests
         public void DadoHeIngresadoElCorreoElectronico()
         {
             var tePrestaLogin = ScenarioContext.Current.Get<ITePrestaLogin>();
-            tePrestaLogin.SetEmail(Constants.SignUpEmail);
+            tePrestaLogin.SetEmail(Constants.SignInUser);
         }
 
         [Given(@"he ingresado mi contraseña")]
         public void DadoHeIngresadoMiContrasena()
         {
             var tePrestaLogin = ScenarioContext.Current.Get<ITePrestaLogin>();
-            tePrestaLogin.SetPassword(Constants.SignUpPassword);
+            tePrestaLogin.SetPassword(Constants.SignInPassword);
         }
 
         [When(@"presiono Ingresar")]
@@ -70,11 +70,14 @@ namespace SpecFlowTests.Acceptance_Tests
             ScenarioContext.Current.Set<ITePrestaDashboard>(tePrestaDashboard);
         }
 
-        [Then(@"debo ver ""(.*)""")]
-        public void EntoncesDeboVer(string p0)
+        [Then(@"debo ver un mensaje de bienvenida")]
+        public void EntoncesDeboVerUnMensajeDeBienvenida()
         {
-            var tePrestaDashboard = ScenarioContext.Current.Get<ITePrestaDashboard>();
-            Assert.AreEqual(p0, tePrestaDashboard.MensajeBienvenida());
+            var tePrestaDashBoard = ScenarioContext.Current.Get<ITePrestaDashboard>();
+            var msgBienvenida = tePrestaDashBoard.MensajeBienvenida();
+            var mensajeCorrecto = msgBienvenida.Contains(Constants.WelcomeMessage);
+            Assert.IsTrue(mensajeCorrecto);
         }
+
     }
 }

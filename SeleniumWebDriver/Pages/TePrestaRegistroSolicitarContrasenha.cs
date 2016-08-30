@@ -30,7 +30,7 @@ namespace SeleniumWebDriver.Pages
 
         public void IngresarConfirmacionContrasena(string password)
         {
-            var confirmPasswordTextBox = _driver.FindElement(By.Id("Password"));
+            var confirmPasswordTextBox = _driver.FindElement(By.Id("ConfirmPassword"));
             confirmPasswordTextBox.Clear();
             confirmPasswordTextBox.SendKeys(password);
         }

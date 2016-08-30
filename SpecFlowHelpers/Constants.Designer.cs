@@ -70,6 +70,24 @@ namespace SpecFlowHelpers {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Abc12345.
+        /// </summary>
+        public static string SignInPassword {
+            get {
+                return ResourceManager.GetString("SignInPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ana.ocampo@ceiba.com.co.
+        /// </summary>
+        public static string SignInUser {
+            get {
+                return ResourceManager.GetString("SignInUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 44444444.
         /// </summary>
         public static string SignUpCellPhone {
@@ -97,11 +115,20 @@ namespace SpecFlowHelpers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 022802339.
+        ///   Looks up a localized string similar to 022802339-9.
         /// </summary>
         public static string SignUpUserId {
             get {
                 return ResourceManager.GetString("SignUpUserId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bienvenido(a):.
+        /// </summary>
+        public static string WelcomeMessage {
+            get {
+                return ResourceManager.GetString("WelcomeMessage", resourceCulture);
             }
         }
     }

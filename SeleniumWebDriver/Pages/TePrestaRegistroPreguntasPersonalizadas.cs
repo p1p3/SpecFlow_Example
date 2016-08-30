@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SpecFlowHelpers;
 using SpecFlowHelpers.Pages;
 
@@ -23,29 +24,29 @@ namespace SeleniumWebDriver.Pages
 
         public void ResponderPreguntas(params string[] respuestas)
         {
-            /*new SelectElement(driver.FindElement(By.Id("Id"))).SelectByText("Cual es tu cantante/banda favorito?");
-            driver.FindElement(By.Id("QuestionsPerUser_0__Answer")).Clear();
-            driver.FindElement(By.Id("QuestionsPerUser_0__Answer")).SendKeys("hola");
-            new SelectElement(driver.FindElement(By.XPath("(//select[@id='Id'])[2]"))).SelectByText("Cual es tu bebida favorita?");
-            driver.FindElement(By.Id("QuestionsPerUser_1__Answer")).Clear();
-            driver.FindElement(By.Id("QuestionsPerUser_1__Answer")).SendKeys("hola");
-            new SelectElement(driver.FindElement(By.XPath("(//select[@id='Id'])[3]"))).SelectByText("Cual es el actor o superhéroe favorito?");
-            driver.FindElement(By.Id("QuestionsPerUser_2__Answer")).Clear();
-            driver.FindElement(By.Id("QuestionsPerUser_2__Answer")).SendKeys("hola");
-            new SelectElement(driver.FindElement(By.XPath("(//select[@id='Id'])[4]"))).SelectByText("Cual es el nombre de tu mascota?");
-            driver.FindElement(By.Id("QuestionsPerUser_3__Answer")).Clear();
-            driver.FindElement(By.Id("QuestionsPerUser_3__Answer")).SendKeys("hola");
-            new SelectElement(driver.FindElement(By.XPath("(//select[@id='Id'])[5]"))).SelectByText("Cual es la marca de tu primer carro?");
-            driver.FindElement(By.Id("QuestionsPerUser_4__Answer")).Clear();
-            driver.FindElement(By.Id("QuestionsPerUser_4__Answer")).SendKeys("hola");
-            driver.FindElement(By.Id("validate-questionnaire")).Click();*/
+            var number = 1;
+            var usedQuestions = 0;
+            foreach (var respuesta in respuestas)
+            {
+                var xPathDropwdownSelector = ($"(//select[@id='Id'])[{number}]");
+                var dropdown = _driver.FindElement(By.XPath(xPathDropwdownSelector));
+                var selector = new SelectElement(dropdown);
+                selector.SelectByIndex(number);
+                number++;
+
+                var cssSelectorAnswer = $"QuestionsPerUser_{usedQuestions}__Answer";
+                var answerTextbox =_driver.FindElement(By.Id(cssSelectorAnswer));
+                answerTextbox.Clear();
+                answerTextbox.SendKeys(respuesta);
+                usedQuestions++;
+            }
         }
 
-        public ITePrestaEstadoCuenta ClickValidar()
+        public ITePrestaDashboard ClickContinuar()
         {
             var valdiateButton = _driver.FindElement(By.Id("validate-questionnaire"));
             valdiateButton.Click();
-            return new TePrestaEstadoCuenta(_driver);
+            return new TePrestaDashboard(_driver);
         }
 
         #endregion

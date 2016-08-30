@@ -102,14 +102,16 @@ this.ScenarioSetup(scenarioInfo);
 #line 18
   testRunner.And("he dado respuesta a las preguntas de seguridad", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 19
-  testRunner.And("he ingresado mi contraseña de registro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
+  testRunner.And("he presionado validar preguntas de seguridad", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 20
-  testRunner.And("he confirmado mi contraseña de registro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
+  testRunner.And("he ingresado mi contraseña de registro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 21
-  testRunner.And("he seleccionado las preguntas personalizadas para recuperar mi contraseña", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
+  testRunner.And("he confirmado mi contraseña de registro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 22
- testRunner.When("presione registrar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Cuando ");
+  testRunner.And("he seleccionado las preguntas personalizadas para recuperar mi contraseña", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 23
+ testRunner.When("presione continuar para terminar el proceso de registro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Cuando ");
+#line 24
  testRunner.Then("debo ingresar exitosamente a mi estado de cuenta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entonces ");
 #line hidden
             this.ScenarioCleanup();

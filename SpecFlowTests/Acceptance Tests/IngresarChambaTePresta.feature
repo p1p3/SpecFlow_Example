@@ -6,5 +6,5 @@ Escenario: Ingresar a te presta
 	 Y he ingresado el correo electrónico
 	 Y he ingresado mi contraseña
 	Cuando presiono Ingresar
-	Entonces debo ver "Bienvenido(a): JUAN RICARDO DELGADO GALVEZ"
+	Entonces debo ver un mensaje de bienvenida
 
