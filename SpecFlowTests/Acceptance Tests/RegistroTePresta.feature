@@ -3,7 +3,7 @@ Yo como cliente de una de las marcas de Grupo Gente Te Presta (Beto Te Presta, P
 Quiero registrarme en la sucursal virtual 
 Para solicitar créditos
 
-@HU017,HU018
+@RegistroUsuarios
 Escenario: Registro usuario con teléfono diferente 
 	Dado he ingresado a te presta 
 	 Y he presionado Registrarse

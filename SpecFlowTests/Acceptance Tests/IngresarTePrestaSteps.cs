@@ -10,34 +10,28 @@ using TechTalk.SpecFlow;
 namespace SpecFlowTests.Acceptance_Tests
 {
     [Binding]
-    public class IngresarAChambaTePrestaSteps
+    public class IngresarTePrestaSteps
     {
         private readonly ITestDriver _testDriver;
         private readonly ITeprestaFunctions _teprestaFunctions;
 
-        public IngresarAChambaTePrestaSteps(ITestDriver testDriver, ITeprestaFunctions teprestaFunctions)
+        public IngresarTePrestaSteps(ITestDriver testDriver, ITeprestaFunctions teprestaFunctions)
         {
             _testDriver = testDriver;
             _teprestaFunctions = teprestaFunctions;
         }
 
-        [BeforeScenario]
+        [BeforeScenario("SignIn")]
         public void Setup()
         {
             _testDriver.Start();
+            ScenarioContext.Current.Set<ITestDriver>(_testDriver);
         }
 
-        [AfterScenario]
+        [AfterScenario("SignIn")]
         public void TearDown()
         {
             _testDriver.Stop();
-        }
-
-        [Given(@"he ingresado a te presta")]
-        public void DadoHeIngresadoAChambaTePresta()
-        {
-            var homePage = _testDriver.Driver.NavigateToHomePage();
-            ScenarioContext.Current.Set<ITePrestaHome>(homePage);
         }
 
         [Given(@"he presionado Ingresar")]

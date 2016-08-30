@@ -19,14 +19,15 @@ namespace SpecFlowTests.Acceptance_Tests
             _teprestaFunctions = teprestaFunctions;
         }
 
-        [BeforeScenario]
+        [BeforeScenario("RegistroUsuarios")]
         public void Setup()
         {
             _testDriver.Start();
             _teprestaFunctions.DeleteUser(Constants.SignUpEmail);
+            ScenarioContext.Current.Set<ITestDriver>(_testDriver);
         }
 
-        [AfterScenario]
+        [AfterScenario("RegistroUsuarios")]
         public void TearDown()
         {
             _testDriver.Stop();

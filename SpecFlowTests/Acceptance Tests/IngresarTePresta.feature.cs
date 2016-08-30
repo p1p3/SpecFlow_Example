@@ -23,7 +23,7 @@ namespace SpecFlowTests.AcceptanceTests
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "IngresarChambaTePresta.feature"
+#line 1 "IngresarTePresta.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
@@ -70,22 +70,24 @@ namespace SpecFlowTests.AcceptanceTests
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Ingresar a te presta")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Ingresar a Chamba te presta")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("SignIn")]
         public virtual void IngresarATePresta()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ingresar a te presta", ((string[])(null)));
-#line 3
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ingresar a te presta", new string[] {
+                        "SignIn"});
 #line 4
- testRunner.Given("he ingresado a te presta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+this.ScenarioSetup(scenarioInfo);
 #line 5
-  testRunner.And("he presionado Ingresar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
+ testRunner.Given("he ingresado a te presta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line 6
-  testRunner.And("he ingresado el correo electrónico", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
+  testRunner.And("he presionado Ingresar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 7
-  testRunner.And("he ingresado mi contraseña", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
+  testRunner.And("he ingresado el correo electrónico", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 8
- testRunner.When("presiono Ingresar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Cuando ");
+  testRunner.And("he ingresado mi contraseña", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Y ");
 #line 9
+ testRunner.When("presiono Ingresar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Cuando ");
+#line 10
  testRunner.Then("debo ver un mensaje de bienvenida", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entonces ");
 #line hidden
             this.ScenarioCleanup();

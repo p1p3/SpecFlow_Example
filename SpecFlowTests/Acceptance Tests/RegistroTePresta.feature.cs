@@ -72,11 +72,11 @@ namespace SpecFlowTests.AcceptanceTests
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Registro usuario con teléfono diferente")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "RegistroTePresta")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("HU017,HU018")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("RegistroUsuarios")]
         public virtual void RegistroUsuarioConTelefonoDiferente()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Registro usuario con teléfono diferente", new string[] {
-                        "HU017,HU018"});
+                        "RegistroUsuarios"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8

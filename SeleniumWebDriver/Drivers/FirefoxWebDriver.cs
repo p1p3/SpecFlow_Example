@@ -14,13 +14,11 @@ namespace SeleniumWebDriver.Drivers
         public FirefoxWebDriver()
         {
             _turnOnWaitTime = TimeSpan.FromMinutes(4);
-            _webDriver = new FirefoxDriver(new FirefoxBinary(), new FirefoxProfile(), TimeSpan.FromMinutes(4));
-            TurnOnWait();
         }
 
         #region Members
         private readonly TimeSpan _turnOnWaitTime;
-        private readonly IWebDriver _webDriver;
+        private IWebDriver _webDriver;
         private ITePrestaHome _homePage;
         #endregion
 
@@ -28,6 +26,8 @@ namespace SeleniumWebDriver.Drivers
 
         public void Initialize()
         {
+            _webDriver = new FirefoxDriver(new FirefoxBinary(), new FirefoxProfile(), TimeSpan.FromMinutes(4));
+            TurnOnWait();
             _homePage = new TePrestaHome(_webDriver);
             _webDriver.Manage().Window.Maximize();
         }

@@ -1,5 +1,6 @@
 ﻿Característica: Ingresar a Chamba te presta
 
+@SignIn
 Escenario: Ingresar a te presta
 	Dado he ingresado a te presta 
 	 Y he presionado Ingresar
